@@ -1,0 +1,11 @@
+---
+- hosts: localhost
+  gather_facts: yes
+  tasks:
+    - name: Get today's date
+      command: date
+      register: date_output
+    - name: print today's date
+      debug:
+        msg: "The today's date is :: {{date_output.stdout}}"
+...

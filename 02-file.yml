@@ -1,0 +1,12 @@
+---
+- hosts: all
+  tasks: 
+  - name: create a file
+    file:
+     path: /home/ansible/f1.txt
+     state: touch
+  - name: copy content to a file
+    copy:
+     content: "welcome\n"     
+     dest: "/home/ansible/f1.txt"
+...
