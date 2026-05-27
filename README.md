@@ -70,15 +70,6 @@ Ansible Architecture
 
 => Playbook is a YML/YAML which contains set of taks (configuration as code).
 
-
-===============
-Ansible Setup
-===============
-
-Video : https://www.youtube.com/watch?v=bm1J4ED-ZUo
-
-Steps : https://github.com/ashokitschool/DevOps-Documents/blob/main/11-Ansible-Setup.md
-
 ===========================
 Ansible Ad-Hoc Commands
 ===========================
@@ -110,6 +101,9 @@ Ex:
 		4) service
 
 		5) copy
+         
+        6) service
+ 
 
 
 		$ ansible all -m ping
