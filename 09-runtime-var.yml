@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+  become: true
+  gather_fats: yes
+  tasks: 
+    - name: install pakage
+      yum:
+       name: {{pkg_name}}
+       state: latest
+...
+
+# ansible-playbook 09-runtime-var.yml --extra-vars pkg_name=httpd
