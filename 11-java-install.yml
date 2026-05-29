@@ -1,0 +1,19 @@
+---
+- hosts: webserver
+  become: true
+  gather_facts: yes
+  tasks: 
+    - name: install java in RedHat family
+      yum: 
+       name: java
+       state: present
+      when: ansible_os_family == "RedHat"
+    - name: install java in Debian family
+      apt:
+       name: java
+       state: present
+      when: ansible_os_family == "Debian"
+...
+
+
+
